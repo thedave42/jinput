@@ -24,7 +24,7 @@ if [[ ! -f pom.xml || ! -d plugins/linux ]]; then
 fi
 
 # 2. Sanity: required tools.
-for tool in mvn cc strip uname java; do
+for tool in mvn cc strip uname java javac; do
     if ! command -v "$tool" >/dev/null 2>&1; then
         echo "ERROR: required tool '$tool' not found in PATH" >&2
         echo "       install with: sudo apt install build-essential maven openjdk-21-jdk-headless" >&2
